@@ -58,6 +58,7 @@ export default function GroupOptions(data) {
   }, []);
 
   const signInvoice = () => {
+    debugger;
     var crypts = atob(crypt);
     // Người mua ký điiiiiiiiiiiiiiiiiiiiiiiiii
     if (_conn.state != 1) {

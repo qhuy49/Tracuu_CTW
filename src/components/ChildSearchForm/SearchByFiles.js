@@ -14,23 +14,28 @@ export const SearchByFiles = () => {
 
 
     const preventDefault = (e) => {
+        console.log("1",e);
         e.preventDefault();
         // e.stopPropagation();
     }
 
     const dragOver = (e) => {
+        console.log("2",e);
         e.preventDefault();
     }
 
     const dragEnter = (e) => {
+        console.log("3",e);
         preventDefault(e);
     }
 
     const dragLeave = (e) => {
+        console.log("4",e);
         preventDefault(e);
     }
 
     const fileDrop = (e) => {
+        console.log("5",e);
         preventDefault(e);
         const files = e.dataTransfer.files;
         if (files.length) {
@@ -39,6 +44,7 @@ export const SearchByFiles = () => {
     }
 
     const filesSelected = (e) => {
+        console.log("6",e);
         let files = e.currentTarget.files
         if (files.length > 1) {
             const msg = 'Vui lòng chỉ chọn 1 File'
@@ -81,6 +87,7 @@ export const SearchByFiles = () => {
     }
 
     const handleFiles = (e) => {
+        console.log("8",e);
         if (e.length > 1) {
             const msg = 'Vui lòng chỉ chọn 1 File'
             e.target.value = null
@@ -115,6 +122,8 @@ export const SearchByFiles = () => {
     }
 
     const uploadFiles = (data) => {
+        console.log("9",data);
+        debugger;
         let files = fileInputRef.current.files;
         if (files.length > 0) {
             let selectedFile = files[0];
