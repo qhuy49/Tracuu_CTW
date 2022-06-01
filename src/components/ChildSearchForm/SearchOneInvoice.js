@@ -5,6 +5,7 @@ import { useToasts } from "react-toast-notifications";
 import ExportModal from "../ExportModal";
 // import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingOverlay from 'react-loading-overlay';
+import { TextEncoder, TextDecoder, EncodingIndexes, getEncoding } from 'text-decoding';
 
 export const SearchOneInvoice = ({ _mst, _sbm }) => {
   const url = "Search/SearchInvoice";
@@ -50,7 +51,14 @@ export const SearchOneInvoice = ({ _mst, _sbm }) => {
             } else {
               setisLoad(false);
               setOpenModal(false);
-              addToast("Không tìm thấy hóa đơn! Vui lòng kiểm tra lại thông tin", { appearance: "error" });
+              const decoded = new TextDecoder('utf-8').decode(res.data);
+              if(decoded != null){
+                 addToast(decoded, { appearance: "error" });
+              }
+              else{
+                addToast("Không tìm thấy hóa đơn! Vui lòng kiểm tra lại thông tin", { appearance: "error" });
+              }
+             
             }
           })
           .catch((err) => {
