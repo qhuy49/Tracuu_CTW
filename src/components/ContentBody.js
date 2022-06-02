@@ -6,7 +6,7 @@ export default class ContentBody extends Component {
       <div>
         <section id="pricing" className="pricing">
           <div className="container" data-aos="fade-up">
-            <div className="row">
+            {/* <div className="row">
               <div
                 className="col-lg-4 col-md-4"
                 data-aos="zoom-im"
@@ -44,7 +44,7 @@ export default class ContentBody extends Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

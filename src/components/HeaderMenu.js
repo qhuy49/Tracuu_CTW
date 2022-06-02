@@ -6,7 +6,7 @@ export default class HeaderMenu extends Component {
     const directLink = (e) => {
       var a = document.createElement("a");
       document.body.appendChild(a);
-      a.href = "https://minvoice.vn/dang-ky-dai-ly-hoa-don-dien-tu/";
+      a.href = "https://drive.google.com/drive/folders/15kzkcSe-2tMFx6moKjlDYOHa7yUWicbP?usp=sharing";
       a.target = "_blank";
       a.click();
       document.body.removeChild(a);
@@ -16,8 +16,9 @@ export default class HeaderMenu extends Component {
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <a href="">
-              <img src="./LibCustom/img/logo.png" alt=""></img>
+              <img src="./LibCustom/img/logo2.png" alt=""></img>
             </a>
+            {/* <span>Trung tâm Nước sạch và VSMT Nông thôn</span> */}
           </h1>
           <nav id="navbar" className="navbar">
             <ul>
@@ -45,7 +46,7 @@ export default class HeaderMenu extends Component {
                   </li>
                 </ul>
               </li>
-              <li className="dropdown">
+              {/* <li className="dropdown">
                 <a href="">
                   <span>Sản phẩm</span> <i className="bi bi-chevron-down" />
                 </a>
@@ -85,7 +86,13 @@ export default class HeaderMenu extends Component {
                 <button className="btn btn-primary fix-header-button " onClick={directLink}>
                   ĐĂNG KÝ ĐẠI LÝ
                 </button>
+              </li> */}
+              <li>
+                <button className="btn btn-primary fix-header-button " onClick={directLink}>
+                Hướng dẫn tra cứu
+                </button>
               </li>
+              
             </ul>
             <i className="bi bi-list mobile-nav-toggle" />
 

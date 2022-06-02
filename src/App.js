@@ -50,7 +50,7 @@ class App extends Component {
               <HeaderMenu />
               <SearchForm />
               <FixContentBody />
-              <ContentSlider />
+              {/* <ContentSlider /> */}
               <Footers />
             </ToastProvider>
           </div>
