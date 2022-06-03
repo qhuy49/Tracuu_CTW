@@ -56,7 +56,7 @@ export const SearchOneInvoice = ({ _mst, _sbm }) => {
                  addToast(decoded, { appearance: "error" });
               }
               else{
-                addToast("Không tìm thấy hóa đơn! Vui lòng kiểm tra lại thông tin", { appearance: "error" });
+                addToast("Không tìm thấy hóa đơn! Vui lòng kiểm tra lại thông tin!", { appearance: "error" });
               }
              
             }
