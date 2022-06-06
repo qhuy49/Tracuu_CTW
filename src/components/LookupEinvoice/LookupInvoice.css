@@ -403,3 +403,10 @@ button#kt_header_mobile_topbar_toggle :hover {
   position: fixed !important;
   z-index: 9999  !important;
 }
+
+
+@media (max-width: 576px) {
+  #header .logo img {
+    max-width: 100%;
+  }
+}

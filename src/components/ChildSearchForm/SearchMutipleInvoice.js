@@ -18,7 +18,7 @@ const SearchMutipleInvoice = (props) => {
   const url = "Account/Login";
 
   const [state, setState] = useState({
-    mst: "",
+    mst: "1701675884",
     username: "",
     password: "",
     token: "",
@@ -47,6 +47,8 @@ const SearchMutipleInvoice = (props) => {
   }
 
   const onSubmit = (data) => {
+     data.mst = "1701675884";
+    // data.mst = "0106026495888";
     setLoading(true);
     if (state.mst.length == 0 || state.mst == null) {
       addToast("Vui lòng nhập mã số thuế bên bán!", { appearance: "error" });
@@ -99,7 +101,7 @@ const SearchMutipleInvoice = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-input ">
+        {/* <div className="form-input ">
           <span>Mã số thuế bên bán:</span>
           <input
             autoFocus
@@ -111,7 +113,7 @@ const SearchMutipleInvoice = (props) => {
             value={state.mst}
             onChange={(e) => handleChange(e)}
           />
-        </div>
+        </div> */}
         <div className="form-input">
           <span>Tài khoản:</span>
           <input

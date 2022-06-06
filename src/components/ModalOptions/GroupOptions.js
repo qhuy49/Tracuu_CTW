@@ -46,6 +46,7 @@ export default function GroupOptions(data) {
     setisLoad(true);
     axiosInstance.post(url, jsonInfo).then((res) => {
       setinfoModal(res.data.data.data[0]);
+      InvoiceOptionsData.tt_ttoan = res.data.data.data[0].tt_ttoan;
       setInvoiceSeries(res.data.data.data[0].inv_invoiceSeries);
       setMauSo(res.data.data.data[0].mau_hd);
       setmasoThue(res.data.data.data[0].inv_buyerTaxCode);

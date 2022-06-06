@@ -23,7 +23,8 @@ export const SearchOneInvoice = ({ _mst, _sbm }) => {
     setOpenModal(!openModal);
   }
   const onSubmit = (data) => {
-    var a = data.masothue;
+     var a = "1701675884";
+    // var a = "0106026495888";
     var b = a.replace(/\s+/g, '');
     var json = {
       "masothue": b,
@@ -79,7 +80,7 @@ export const SearchOneInvoice = ({ _mst, _sbm }) => {
     <div>
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-input">
+          {/* <div className="form-input">
             <span>Mã số thuế bên bán:</span>
             <input
               type="text"
@@ -88,7 +89,7 @@ export const SearchOneInvoice = ({ _mst, _sbm }) => {
               placeholder="Mã số thuế bên bán:"
               ref={register}
             />
-          </div>
+          </div> */}
           <div className="form-input">
             <span>Số bảo mật:</span>
             <input

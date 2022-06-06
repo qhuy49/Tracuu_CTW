@@ -296,6 +296,7 @@ const LookupEinvoice = (props) => {
       field: "action", headerName: "Action", headerAlign: "center", align: "left", width: 160, renderHeader: () => (<strong>{'Tải xuống'}</strong>),
       renderCell: (params) => (
         <>
+        {params.row.tt_ttoan == true ?
         <Button
           variant="contained"
           color="primary"
@@ -305,7 +306,8 @@ const LookupEinvoice = (props) => {
 
         >
           XML
-        </Button>
+        </Button> : null
+        }
         <Button
           variant="contained"
           color="primary"
